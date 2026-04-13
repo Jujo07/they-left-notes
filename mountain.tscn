@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://djefn78xbnftp"]
+
+[ext_resource type="PackedScene" uid="uid://cabiwyuoxhbt0" path="res://assets/mountain_range_01.glb" id="1_er23v"]
+[ext_resource type="Texture2D" uid="uid://c587r5m54jf28" path="res://assets/mountain_range_01_0.jpg" id="2_dhbab"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jq5p7"]
+albedo_texture = ExtResource("2_dhbab")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6epj"]
+albedo_texture = ExtResource("2_dhbab")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4lxj2"]
+albedo_texture = ExtResource("2_dhbab")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ylfhi"]
+albedo_texture = ExtResource("2_dhbab")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcjwc"]
+albedo_texture = ExtResource("2_dhbab")
+
+[node name="Sketchfab_Scene" unique_id=1369731281 instance=ExtResource("1_er23v")]
+
+[node name="Object_2" parent="Sketchfab_model/mesh_range01_05K_OBJ_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(345375079) index="0" unique_id=2142156765]
+surface_material_override/0 = SubResource("StandardMaterial3D_jq5p7")
+
+[node name="Object_3" parent="Sketchfab_model/mesh_range01_05K_OBJ_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(345375079) index="1" unique_id=2110837297]
+surface_material_override/0 = SubResource("StandardMaterial3D_e6epj")
+
+[node name="Object_4" parent="Sketchfab_model/mesh_range01_05K_OBJ_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(345375079) index="2" unique_id=2128010452]
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_4lxj2")
+
+[node name="Object_5" parent="Sketchfab_model/mesh_range01_05K_OBJ_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(345375079) index="3" unique_id=2128252630]
+surface_material_override/0 = SubResource("StandardMaterial3D_ylfhi")
+
+[node name="Object_6" parent="Sketchfab_model/mesh_range01_05K_OBJ_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(345375079) index="4" unique_id=1718288327]
+surface_material_override/0 = SubResource("StandardMaterial3D_wcjwc")

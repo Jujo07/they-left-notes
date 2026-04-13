@@ -1,0 +1,41 @@
+[gd_scene load_steps=11 format=3 uid="uid://d1kuhevm2qcj5"]
+
+[ext_resource type="ArrayMesh" uid="uid://0twub4wjmsyy" path="res://demo/assets/casa/house4.obj" id="1_1j0p1"]
+[ext_resource type="Texture2D" uid="uid://b0loywsyurv8r" path="res://demo/assets/casa/house4_tex2.png" id="2_80a45"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h03dd"]
+albedo_texture = ExtResource("2_80a45")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sx2nr"]
+albedo_texture = ExtResource("2_80a45")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sevcm"]
+albedo_texture = ExtResource("2_80a45")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqj30"]
+albedo_texture = ExtResource("2_80a45")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fta43"]
+albedo_texture = ExtResource("2_80a45")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e13ms"]
+albedo_texture = ExtResource("2_80a45")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mya25"]
+albedo_texture = ExtResource("2_80a45")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8e4ik"]
+albedo_texture = ExtResource("2_80a45")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_1j0p1")
+surface_material_override/0 = SubResource("StandardMaterial3D_h03dd")
+surface_material_override/1 = SubResource("StandardMaterial3D_sx2nr")
+surface_material_override/2 = SubResource("StandardMaterial3D_sevcm")
+surface_material_override/3 = SubResource("StandardMaterial3D_sqj30")
+surface_material_override/4 = SubResource("StandardMaterial3D_fta43")
+surface_material_override/5 = SubResource("StandardMaterial3D_e13ms")
+surface_material_override/6 = SubResource("StandardMaterial3D_mya25")
+surface_material_override/7 = SubResource("StandardMaterial3D_8e4ik")

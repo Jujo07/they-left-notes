@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwi1c3mt0kxjb"]
+
+[ext_resource type="PackedScene" uid="uid://b7kp3lgdyr5he" path="res://demo/assets/eye.fbx" id="1_658j3"]
+[ext_resource type="Texture2D" uid="uid://bqr4vvwoolwvd" path="res://demo/assets/eyeball_texture.png" id="2_gx3x7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jc823"]
+albedo_texture = ExtResource("2_gx3x7")
+
+[node name="eye" instance=ExtResource("1_658j3")]
+
+[node name="eyeball" parent="bone" index="0"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.48607284, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_jc823")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgxo6roihxa0b"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y7ck5"]
+load_path = "res://.godot/imported/M_BrokenFingers_Base_color.png-d4502c89b0e559f386995d8566a83499.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1hry1"]
+albedo_texture = SubResource("CompressedTexture2D_y7ck5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gc1v5"]
+albedo_texture = SubResource("CompressedTexture2D_y7ck5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iighn"]
+albedo_texture = SubResource("CompressedTexture2D_y7ck5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x5p4c"]
+albedo_texture = SubResource("CompressedTexture2D_y7ck5")
+
+[node name="Fingers"]
+
+[node name="Object001" parent="Group001" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_1hry1")
+
+[node name="Object002" parent="Group001" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gc1v5")
+
+[node name="Object003" parent="Group001" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_iighn")
+
+[node name="finger_low" parent="Group001" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_x5p4c")

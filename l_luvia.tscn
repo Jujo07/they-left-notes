@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6mpaje4sf4if"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dujcl"]
+emission_shape_scale = Vector3(-500, 0, -500)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+hue_variation_min = -1.0
+hue_variation_max = -0.53000003
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[sub_resource type="Curve" id="Curve_lmtk8"]
+_data = [Vector2(0, 0.033707857), 0.0, 0.0, 0, 0, Vector2(0.30487806, 0.764045), 0.0, 0.0, 0, 0, Vector2(0.73780495, 0.28089893), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_50alb"]
+albedo_color = Color(0.73333335, 1, 1, 1)
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_2ftjp"]
+material = SubResource("StandardMaterial3D_50alb")
+shape = 0
+section_length = 9.4
+curve = SubResource("Curve_lmtk8")
+
+[node name="LLuvia" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+amount = 2000
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_dujcl")
+draw_pass_1 = SubResource("RibbonTrailMesh_2ftjp")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="GPUParticles3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.8582)
+size = Vector3(761.9911, 647.9, 648.07666)

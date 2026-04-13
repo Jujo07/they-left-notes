@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dbjcbjurjyymb"
+path="res://.godot/imported/terror.dialogue-8ca6034dbf9f49d78be1e20b145e7186.tres"
+
+[deps]
+
+source_file="res://terror.dialogue"
+dest_files=["res://.godot/imported/terror.dialogue-8ca6034dbf9f49d78be1e20b145e7186.tres"]
+
+[params]
+
+defaults=true

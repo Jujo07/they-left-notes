@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cystnpoaswm1l"]
+
+[ext_resource type="PackedScene" uid="uid://dik4hskerr6ew" path="res://assets/male_casual.fbx" id="1_1nig1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_52s5p"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="male_casual" unique_id=1743912161 instance=ExtResource("1_1nig1")]
+
+[node name="male_player" parent="rig/Skeleton3D" parent_id_path=PackedInt32Array(1379522275) index="0" unique_id=678622678]
+surface_material_override/0 = SubResource("StandardMaterial3D_52s5p")

@@ -1,0 +1,43 @@
+~ start
+
+Yo: [speed=0.5]¿Q-qué…? ¿D-dónde estoy?[wait=2]
+
+Yo: [speed=0.5]Todo… oscuro… y frío…[wait=2]
+
+Yo: [speed=0.8]V-vale… respira… uno… dos…[wait=1.5]
+
+Yo: [speed=0.7]S-seguro que es… un sueño… ¿verdad?[wait=1]
+
+???: [speed=1.5][glitch]¿Y si no hay salida?[/glitch][wait=1]
+
+???: [speed=1.5][glitch]¿Y si te mereces quedarte aquí… pudriéndote?[/glitch][wait=1]
+
+Yo: [speed=2.0]¡N-no! ¡C-cállate![wait=1.5]
+
+???: [speed=1.0][glitch]Buena suerte…[/glitch][next=4]
+
+Yo: [speed=0.8]¿H-hola…?[wait=2]
+
+Yo: [speed=0.8]¿Hay… alguien más?[next=3]
+
+Yo: [speed=0.5](Silencio)[wait=2]
+
+Yo: [speed=0.5]…[wait=1.5]
+
+Yo: [speed=0.6]Mis manos… tiemblan…[wait=1]
+
+Yo: [speed=0.6]Busco… la linterna…[wait=1]
+
+Yo: [speed=1.0][sound=linterna_click.wav](click)[wait=1.5]
+
+Yo: [speed=0.8]La luz… parpadea… pero alumbra…[wait=2]
+
+Yo: [speed=0.7]Espera…[wait=1]
+
+Yo: [speed=0.6]Mis ojos… se acomodan a la oscuridad…[wait=1.5]
+
+Yo: [speed=0.7]Allí… entre las ramas…[wait=2]
+
+Yo: [speed=0.4]Parece… haber algo… en un árbol… cerca de donde estoy…
+
+~ end

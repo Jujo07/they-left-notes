@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcrt2x46vadbn"]
+
+[ext_resource type="PackedScene" uid="uid://cukvpsamoyrqb" path="res://escenas/cabin.tscn" id="1_3kgxc"]
+[ext_resource type="Script" uid="uid://dvjyesmdxw83y" path="res://area_3d.gd" id="1_rb2g2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ftxe7"]
+size = Vector3(1.4490967, 1.2645264, 1.4145508)
+
+[node name="Node3D" instance=ExtResource("1_3kgxc")]
+
+[node name="Area3D" type="Area3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5427681, 0.22959232, 7.828367)
+script = ExtResource("1_rb2g2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22454834, 0.4072876, 0.20727539)
+shape = SubResource("BoxShape3D_ftxe7")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://btun8mao6ip3f"]
+
+[ext_resource type="ArrayMesh" uid="uid://cufynbpeaqls5" path="res://demo/assets/cars/Car 01/Car.obj" id="1_ko5e3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rql76"]
+size = Vector3(2.173462, 2.5083008, 5.3779297)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ko5e3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020446777, 1.3069375, -0.0746212)
+shape = SubResource("BoxShape3D_rql76")

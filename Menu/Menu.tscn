@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0gh31fuqpik1"]
+
+[ext_resource type="FontFile" uid="uid://be86gxt2dsu3e" path="res://Menu/Ttf/VCR_OSD_MONO_1.001.ttf" id="1_jf1j2"]
+
+[sub_resource type="Theme" id="Theme_jf1j2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_jf1j2")
+color = Color(0.5609549, 0.5609549, 0.5609549, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.75
+offset_top = -102.5
+offset_right = 140.75
+offset_bottom = 102.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jf1j2")
+theme_override_font_sizes/font_size = 30
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jf1j2")
+theme_override_font_sizes/font_size = 30
+text = "OPTIONS"
+
+[node name="Button3" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jf1j2")
+theme_override_font_sizes/font_size = 30
+text = "EXIT"

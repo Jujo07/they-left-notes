@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://ki21aib5ne32"]
+
+[ext_resource type="PackedScene" uid="uid://duc1xlnhhys5" path="res://demo/assets/cadaver.fbx" id="1_6alv8"]
+[ext_resource type="Texture2D" uid="uid://c7bpjnciem462" path="res://demo/assets/cadaver_Base_Color.png" id="2_rxq8c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gojna"]
+albedo_texture = ExtResource("2_rxq8c")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hw10v"]
+size = Vector3(0.009170532, 0.015541077, 0.0030517578)
+
+[node name="cadaver" instance=ExtResource("1_6alv8")]
+
+[node name="muerto" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gojna")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="muerto" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, -7.1054274e-15, 0, 0, 0.9999999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="muerto/StaticBody3D" index="0"]
+transform = Transform3D(1.0000001, 0, 0, 0, 0.9999452, -1.5987212e-12, 0, 1.1368684e-13, 0.99993324, 0.0004600917, -0.00040846778, -0.0023318492)
+shape = SubResource("BoxShape3D_hw10v")

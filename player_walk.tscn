@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://grqq2be36nmo"]
+
+[ext_resource type="PackedScene" uid="uid://bkf7senf0beu2" path="res://Player walk.fbx" id="1_01orl"]
+[ext_resource type="Script" uid="uid://b36y8skaej6kk" path="res://2player.gd" id="2_0mysh"]
+[ext_resource type="Texture2D" uid="uid://dptxhq78qxow2" path="res://Vitalik_edit_2.png" id="2_bc8n4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q8mu4"]
+radius = 0.37841797
+height = 1.791748
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0mysh"]
+albedo_texture = ExtResource("2_bc8n4")
+
+[node name="Player walk" instance=ExtResource("1_01orl")]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." index="0"]
+script = ExtResource("2_0mysh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04753697, 0.8594971, 0)
+shape = SubResource("CapsuleShape3D_q8mu4")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" index="1"]
+transform = Transform3D(-0.9999424, 0, 0.0107335495, -0.00074107235, 0.9976137, -0.069038644, -0.010707936, -0.069042616, -0.99755627, 0, 1.8478695, 0.11727095)
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/1/rotation = Quaternion(0.013982706, -0.04357369, 0.0006099172, 0.9989522)
+bones/3/rotation = Quaternion(0.0138376895, 0.00444045, -0.003733707, 0.9998875)
+bones/5/rotation = Quaternion(-0.013511187, 0.006183086, -0.991703, 0.12768866)
+bones/6/rotation = Quaternion(0.30071253, -0.07359787, -0.09091057, 0.94651496)
+bones/11/rotation = Quaternion(0.014541209, -0.051799428, 0.99263924, 0.108502656)
+bones/12/rotation = Quaternion(0.1277908, 0.0105794165, 0.08851441, 0.9877869)
+bones/17/rotation = Quaternion(0.8554324, 0.119351745, 0.47672042, 0.16348828)
+bones/18/rotation = Quaternion(0.26343894, 0.016844332, 0.47316024, 0.84049726)
+bones/19/rotation = Quaternion(-0.36090374, -0.0015404645, -0.5919167, 0.7206808)
+bones/21/rotation = Quaternion(0.868783, -0.056334153, -0.48995695, 0.04455213)
+bones/22/rotation = Quaternion(0.06121511, -0.002106816, -0.13563985, 0.98886305)
+bones/23/rotation = Quaternion(-0.39305717, 0.0025782997, 0.6435857, 0.656732)
+
+[node name="Torso" parent="Armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_0mysh")

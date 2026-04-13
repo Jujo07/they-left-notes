@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://5awqlegd5v0a"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="entrada" type="Marker3D" parent="."]

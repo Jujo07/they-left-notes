@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dglolaxikhq42"]
+
+[ext_resource type="Script" uid="uid://vd0ii4a74ipp" path="res://mission_ui.gd" id="1_1cl3a"]
+
+[node name="MissionContainer" type="Control" unique_id=485274716]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MissionUI" type="CanvasLayer" parent="." unique_id=1260141731]
+
+[node name="MissionLabel" type="Label" parent="MissionUI" unique_id=2000666213]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_1cl3a")

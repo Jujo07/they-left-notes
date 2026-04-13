@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dihgrit0b240j"]
+
+[ext_resource type="Texture2D" uid="uid://cpgs580g5dolo" path="res://Grass_02_basecolor.png" id="1_uwfay"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mb1sh"]
+size = Vector3(3.4265137, 0.040527344, 3.0239258)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qarfh"]
+
+[sub_resource type="Skin" id="Skin_b3cen"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpfcu"]
+disable_ambient_light = true
+albedo_color = Color(0.37036464, 0.37036443, 0.37036446, 1)
+albedo_texture = ExtResource("1_uwfay")
+metallic_specular = 0.0
+emission_energy_multiplier = 0.0
+uv1_scale = Vector3(20, 20, 20)
+uv1_triplanar = true
+
+[node name="terreno" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0.0027308464, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75305176, -0.024419513, -0.5480957)
+shape = SubResource("BoxShape3D_mb1sh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75305176, 0.024419513, 0.5480957)
+mesh = SubResource("PlaneMesh_qarfh")
+skin = SubResource("Skin_b3cen")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wpfcu")

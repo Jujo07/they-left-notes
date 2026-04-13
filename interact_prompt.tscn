@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bipma7skb75g0"]
+
+[ext_resource type="Script" uid="uid://c41g6rk2r7uyp" path="res://interact_prompt.gd" id="1_xuidi"]
+
+[node name="InteractPrompt" type="CanvasLayer" unique_id=123981129]
+script = ExtResource("1_xuidi")
+
+[node name="Label" type="Label" parent="." unique_id=1396332274]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0

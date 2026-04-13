@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3csamhgqdn1l"]
+
+[ext_resource type="PackedScene" uid="uid://de3qwn1h6w7r8" path="res://demo/assets/Silent Hill 1 Meshes - A Note Doghouse.fbx" id="1_qn7g3"]
+[ext_resource type="Texture2D" uid="uid://mx7ws26b8nfj" path="res://demo/assets/Silent_Hill_1_Meshes_-_A_Note_T.png" id="2_upqen"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ivqde"]
+albedo_texture = ExtResource("2_upqen")
+
+[node name="Silent Hill 1 Meshes - A Note Doghouse" instance=ExtResource("1_qn7g3")]
+
+[node name="crumpled paper_001" parent="." index="0"]
+transform = Transform3D(-5, 0, 0, 0, -5, 1.1920929e-06, 0, -1.1920929e-06, -5, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_ivqde")

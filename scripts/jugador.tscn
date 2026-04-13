@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://domybis48hcrp"]
+
+[sub_resource type="GDScript" id="GDScript_08pb7"]
+script/source = "extends CharacterBody3D
+
+##Variables de caminar##
+var velocidad: int = 200
+var direccion: Vector3
+
+func _physics_process(delta):
+	caminar(delta)
+	move_and_slide()
+
+func caminar(delta):
+	direccion = transform.basis * Vector3(Input.get_axis(\"izquierda\", \"derecha\"),0,Input.get_axis(\"adelante\",\"atras\"))
+	velocity.x = direccion.x * velocidad * delta
+	velocity.z = direccion.z * velocidad * delta
+"
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3br80"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_02gvo"]
+
+[node name="jugador" type="CharacterBody3D"]
+script = SubResource("GDScript_08pb7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_3br80")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_02gvo")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.140049, 0)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpbqg4yh21l5y"]
+
+[ext_resource type="PackedScene" uid="uid://liivb3shmva" path="res://demo/assets/blood decals.glb" id="1_01ejw"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="blood decals" parent="." instance=ExtResource("1_01ejw")]
+transform = Transform3D(-1, 0, -8.742278e-08, -7.642742e-15, -1, 8.742278e-08, -8.742278e-08, 8.742278e-08, 1, 1, 0.04, 0)
