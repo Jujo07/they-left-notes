@@ -1050,11 +1050,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.306672, 0, 8.563938)
 [node name="Node3D" parent="." unique_id=553579288 instance=ExtResource("8_kq8la")]
 transform = Transform3D(0.58741814, 0, 0.8092836, 0, 1, 0, -0.8092836, 0, 0.58741814, -13.079481, 0, -82.12191)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D" unique_id=598352538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.071331024, 3.8346066, 5.415512)
+
 [node name="Node3D2" parent="." unique_id=1984179016 instance=ExtResource("9_ajbnd")]
 transform = Transform3D(0.63723016, 0.010087832, -0.7706077, -0.006428598, 0.9999491, 0.0077741565, 0.7706469, 0, 0.6372626, 22.964079, 0, -83.82835)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D2" unique_id=1571826700]
+transform = Transform3D(0.9999999, -3.913575e-09, 4.172325e-07, 3.6184893e-09, 1.0000001, 7.2816677e-09, -4.172325e-07, -7.185369e-09, 0.9999999, -0.9563637, 4.1330166, 6.0000916)
+
 [node name="Node3D6" parent="." unique_id=704471580 instance=ExtResource("14_860se")]
 transform = Transform3D(0.99958336, 0, -0.028863737, 0, 1, 0, 0.028863737, 0, 0.99958336, 6.578556, 0, -91.42764)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D6" unique_id=1774183391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24595809, 3.6104298, 3.512001)
 
 [node name="bonfire_01" parent="." unique_id=1676383021 instance=ExtResource("11_y4dti")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.761682, 0.006309271, -74.76109)

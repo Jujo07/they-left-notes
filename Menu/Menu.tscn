@@ -1,18 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0gh31fuqpik1"]
+[gd_scene format=3 uid="uid://b0gh31fuqpik1"]
 
 [ext_resource type="FontFile" uid="uid://be86gxt2dsu3e" path="res://Menu/Ttf/VCR_OSD_MONO_1.001.ttf" id="1_jf1j2"]
+[ext_resource type="Script" uid="uid://c3jfldn81ajbo" path="res://Menu/menu.gd" id="1_u03px"]
+[ext_resource type="FontFile" uid="uid://dvqi067kiiv0k" path="res://blackcraft/Blackcraft.ttf" id="2_e56cd"]
+[ext_resource type="Texture2D" uid="uid://c1rh43vq2vnr8" path="res://escenas/Captura de pantalla de 2026-04-15 10-42-20.png" id="4_crea4"]
 
 [sub_resource type="Theme" id="Theme_jf1j2"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=1708434345]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_u03px")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1451102027]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,37 +24,64 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_jf1j2")
-color = Color(0.5609549, 0.5609549, 0.5609549, 1)
+color = Color(0, 0, 0, 0)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1540476285]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -140.75
-offset_top = -102.5
-offset_right = 140.75
-offset_bottom = 102.5
+anchors_preset = -1
+anchor_left = 0.527
+anchor_top = 0.58400005
+anchor_right = 0.527
+anchor_bottom = 0.58400005
+offset_left = -140.04004
+offset_top = -102.20007
+offset_right = 141.45996
+offset_bottom = 102.79993
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 theme_override_constants/separation = 50
 
-[node name="Button" type="Button" parent="ColorRect/VBoxContainer"]
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer" unique_id=53744348]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_jf1j2")
 theme_override_font_sizes/font_size = 30
 text = "PLAY"
 
-[node name="Button2" type="Button" parent="ColorRect/VBoxContainer"]
+[node name="Button2" type="Button" parent="ColorRect/VBoxContainer" unique_id=626361207]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_jf1j2")
 theme_override_font_sizes/font_size = 30
 text = "OPTIONS"
 
-[node name="Button3" type="Button" parent="ColorRect/VBoxContainer"]
+[node name="Button3" type="Button" parent="ColorRect/VBoxContainer" unique_id=1454903573]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_jf1j2")
 theme_override_font_sizes/font_size = 30
 text = "EXIT"
+
+[node name="Label" type="Label" parent="." unique_id=1053772380]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -417.0
+offset_right = -4.0
+offset_bottom = -189.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.36, 0.0684, 0.0684, 1)
+theme_override_fonts/font = ExtResource("2_e56cd")
+theme_override_font_sizes/font_size = 200
+text = "THEY LEFT NOTES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CapturaDePantallaDe20260415104220" type="Sprite2D" parent="." unique_id=1187735918]
+show_behind_parent = true
+position = Vector2(988.625, 562.49994)
+scale = Vector2(1.0274739, 1.1517174)
+texture = ExtResource("4_crea4")
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/Button" to="." method="_on_button_pressed"]
