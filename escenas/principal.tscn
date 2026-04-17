@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://crct6crlytn6r" path="res://escenas/tree_17.tscn" id="10_hqs14"]
 [ext_resource type="PackedScene" uid="uid://cn4s3gsdk6efm" path="res://escenas/fogata.tscn" id="11_y4dti"]
 [ext_resource type="PackedScene" uid="uid://btun8mao6ip3f" path="res://escenas/coche.tscn" id="12_6d7v1"]
+[ext_resource type="PackedScene" uid="uid://c8mi8fnjha3rh" path="res://assets/smoke.glb" id="12_860se"]
 [ext_resource type="PackedScene" uid="uid://conc4fp6oni4k" path="res://cabin3.tscn" id="14_860se"]
 [ext_resource type="PackedScene" uid="uid://ki21aib5ne32" path="res://escenas/cadaver.tscn" id="16_nwl1k"]
 [ext_resource type="PackedScene" uid="uid://b2kgh51lemngv" path="res://escenas/lianas.tscn" id="19_2j7vg"]
@@ -114,7 +115,7 @@ light_specular = 2.32
 shadow_enabled = true
 
 [node name="Jugador" type="CharacterBody3D" parent="." unique_id=453532006]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78952897, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1846027, 0.78952897, 30.915306)
 script = ExtResource("1_vg8cm")
 
 [node name="Camera3D" type="Camera3D" parent="Jugador" unique_id=938808920]
@@ -726,6 +727,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.660046, 0, 0)
 [node name="tree07_2" parent="tree12/tree07-11/tree07_1" unique_id=2081909517 instance=ExtResource("7_kq8la")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.316145, 0, 8.771393)
 
+[node name="Sketchfab_Scene" parent="tree12/tree07-11/tree07_1" unique_id=1868515131 instance=ExtResource("12_860se")]
+transform = Transform3D(0.049947973, 0, 0.00228035, 0, 0.05, 0, -0.00228035, 0, 0.049947973, -22.577747, 1.5605962, -4.444748)
+
+[node name="Sketchfab_Scene2" parent="tree12/tree07-11/tree07_1" unique_id=657584067 instance=ExtResource("12_860se")]
+transform = Transform3D(0.049947973, 0, 0.00228035, 0, 0.05, 0, -0.00228035, 0, 0.049947973, -22.596, 2.015177, -4.844471)
+
 [node name="tree08" parent="tree12" unique_id=1523256615 instance=ExtResource("7_kq8la")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.60122, 0, 8.376049)
 
@@ -1006,7 +1013,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.306672, 0, 8.563938)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1538744, 0, -2.4223385)
 
 [node name="tree07_1" parent="tree09/tree08/tree08/tree09/tree07-1" unique_id=482706796 instance=ExtResource("7_kq8la")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.660046, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.32505, 0, -0.60987854)
 
 [node name="tree07_2" parent="tree09/tree08/tree08/tree09/tree07-1/tree07_1" unique_id=1966099970 instance=ExtResource("7_kq8la")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.306672, 0, 8.563938)
@@ -1080,11 +1087,16 @@ transform = Transform3D(0.9899028, 0, 0.14174785, 0, 1, 0, -0.14174785, 0, 0.989
 [node name="Node3D5" parent="." unique_id=130547460 instance=ExtResource("12_6d7v1")]
 transform = Transform3D(0.11273497, 0, -0.9936252, 0, 1, 0, 0.9936252, 0, 0.11273497, 0, 0, 32.186695)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D5" unique_id=730543578]
+transform = Transform3D(0.98701555, -0.11270848, 0.11444205, 0.11270826, -0.021657797, -0.99339205, 0.11444227, 0.993392, -0.008673402, -0.099357605, 1.1492443, 4.874927)
+light_color = Color(0.7299978, 0.55758834, 0.20719174, 1)
+light_energy = 5.063
+
 [node name="cadaver" parent="." unique_id=435655486 instance=ExtResource("16_nwl1k")]
 transform = Transform3D(0.97620517, 0, -0.21684851, 0, 1, 0, 0.21684851, 0, 0.97620517, -1.1050503, 0, -92.900925)
 
 [node name="lianas" parent="." unique_id=1623890258 instance=ExtResource("19_2j7vg")]
-transform = Transform3D(1, 0, 0, 0, 0.98778373, -0.15583108, 0, 0.15583108, 0.98778373, 5.2820735, 2.2804685, -31.379475)
+transform = Transform3D(-0.10404242, -0.15498537, -0.9824229, 0, 0.98778373, -0.15583108, 0.9945729, -0.016213043, -0.10277141, 16.620932, 2.347739, 12.753343)
 
 [node name="Silent Hill 1 Meshes - A Note Doghouse" parent="." unique_id=1012467095 instance=ExtResource("21_lm6yt")]
 transform = Transform3D(0.99939567, -0.03264489, 0.011935871, -0.010517306, 0.04328634, 0.99900746, -0.033129152, -0.99852943, 0.04291688, 4.9488935, 2.4727144, -96.55379)
@@ -1102,7 +1114,7 @@ transform = Transform3D(0.29641226, 0.008948393, -0.045383774, -0.008894384, 0.2
 note_text = "El fuego limpia todo… menos tu conciencia.Quemé sus ropas, sus fotos, hasta su nombre tallado en este árbol. Pero tú sigues preguntando '¿quién hizo esto?'.¿Cuántas fogatas más necesitas para entender que el humo que respiras… es tu aliento?"
 
 [node name="Area3D2" parent="." unique_id=125540717 instance=ExtResource("23_ihkm2")]
-transform = Transform3D(-0.39983806, -0.0074507548, -0.00860294, -0.00941395, 0.046610385, 0.39716345, -0.006395455, 0.39720514, -0.046766866, 6.0267363, 1.5604887, -33.131287)
+transform = Transform3D(0.04796087, -0.39427432, 0.047408134, -0.009413952, 0.046610396, 0.39716354, -0.3970028, -0.048736513, -0.003690516, 18.28576, 1.6277592, 13.676226)
 note_text = "“Estos árboles… parece que me siguen. Pero no hay nadie. O eso creo…”"
 
 [node name="Label3D" type="Label3D" parent="Area3D2" unique_id=1942258716]
