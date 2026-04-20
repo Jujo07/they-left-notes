@@ -115,7 +115,7 @@ light_specular = 2.32
 shadow_enabled = true
 
 [node name="Jugador" type="CharacterBody3D" parent="." unique_id=453532006]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1846027, 0.78952897, 30.915306)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61719036, 0.78952897, 35.15251)
 script = ExtResource("1_vg8cm")
 
 [node name="Camera3D" type="Camera3D" parent="Jugador" unique_id=938808920]
@@ -1059,18 +1059,24 @@ transform = Transform3D(0.58741814, 0, 0.8092836, 0, 1, 0, -0.8092836, 0, 0.5874
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node3D" unique_id=598352538]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.071331024, 3.8346066, 5.415512)
+light_color = Color(1, 0.73333335, 0.32941177, 1)
+light_energy = 3.0
 
 [node name="Node3D2" parent="." unique_id=1984179016 instance=ExtResource("9_ajbnd")]
 transform = Transform3D(0.63723016, 0.010087832, -0.7706077, -0.006428598, 0.9999491, 0.0077741565, 0.7706469, 0, 0.6372626, 22.964079, 0, -83.82835)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node3D2" unique_id=1571826700]
 transform = Transform3D(0.9999999, -3.913575e-09, 4.172325e-07, 3.6184893e-09, 1.0000001, 7.2816677e-09, -4.172325e-07, -7.185369e-09, 0.9999999, -0.9563637, 4.1330166, 6.0000916)
+light_color = Color(1, 0.73333335, 0.32941177, 1)
+light_energy = 3.0
 
 [node name="Node3D6" parent="." unique_id=704471580 instance=ExtResource("14_860se")]
 transform = Transform3D(0.99958336, 0, -0.028863737, 0, 1, 0, 0.028863737, 0, 0.99958336, 6.578556, 0, -91.42764)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node3D6" unique_id=1774183391]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24595809, 3.6104298, 3.512001)
+light_color = Color(1, 0.73333335, 0.32941177, 1)
+light_energy = 3.0
 
 [node name="bonfire_01" parent="." unique_id=1676383021 instance=ExtResource("11_y4dti")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.761682, 0.006309271, -74.76109)
@@ -1113,6 +1119,16 @@ note_text = "Este intentó correr. Le dije 'shhh, él no quiere verte así'. Lo 
 transform = Transform3D(0.29641226, 0.008948393, -0.045383774, -0.008894384, 0.29986635, 0.0010337328, 0.04539438, 0.00032416658, 0.2965455, 7.397878, 0.1763517, -73.69623)
 note_text = "El fuego limpia todo… menos tu conciencia.Quemé sus ropas, sus fotos, hasta su nombre tallado en este árbol. Pero tú sigues preguntando '¿quién hizo esto?'.¿Cuántas fogatas más necesitas para entender que el humo que respiras… es tu aliento?"
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Area3D3" unique_id=1376244543]
+transform = Transform3D(3.3333335, -8.137431e-08, 1.1920929e-07, 7.566996e-10, 3.3333328, 2.0954758e-09, -8.940697e-08, -1.8626451e-09, 3.3333333, -0.33927727, -0.004844904, -1.5137177)
+light_color = Color(0.91764706, 0.68235296, 0.25882354, 1)
+light_energy = 0.912
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Area3D3" unique_id=330230978]
+transform = Transform3D(3.3333335, -8.137431e-08, 1.1920929e-07, 7.566996e-10, 3.3333328, 2.0954758e-09, -8.940697e-08, -1.8626451e-09, 3.3333333, -0.00406456, 0.19862103, 0.012664795)
+light_color = Color(0.5764706, 1, 1, 1)
+light_energy = 2.0
+
 [node name="Area3D2" parent="." unique_id=125540717 instance=ExtResource("23_ihkm2")]
 transform = Transform3D(0.04796087, -0.39427432, 0.047408134, -0.009413952, 0.046610396, 0.39716354, -0.3970028, -0.048736513, -0.003690516, 18.28576, 1.6277592, 13.676226)
 note_text = "“Estos árboles… parece que me siguen. Pero no hay nadie. O eso creo…”"
@@ -1123,6 +1139,18 @@ outline_modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
 text = "Presiona I para recoger notas"
 font = SubResource("FontFile_ihkm2")
 font_size = 100
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Area3D2" unique_id=779468851]
+transform = Transform3D(2.4999993, -2.9802322e-08, -2.4214387e-08, -5.9604645e-08, 2.5, -3.7020072e-08, 1.8626451e-09, -6.7520887e-09, 2.4999998, -1.3322029, 10.2579, 7.8454533)
+light_color = Color(1, 0.26999998, 0.26999998, 1)
+light_energy = 1.537
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Area3D2" unique_id=2021779960]
+transform = Transform3D(2.4999993, -5.9604645e-08, -2.9802322e-08, -2.9802322e-08, 2.5000002, -6.7288056e-08, 1.8626451e-09, -7.21775e-09, 2.4999998, -0.06877899, 0.5654106, -0.067985535)
+light_color = Color(0.7576269, 0.83367646, 0.94349855, 1)
+light_energy = 1.989
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
 
 [node name="tree14" parent="." unique_id=1239286038 instance=ExtResource("7_kq8la")]
 transform = Transform3D(0.9989595, 0, -0.045607, 0, 1, 0, 0.045607, 0, 0.9989595, -80.12411, 0, -38.14274)
@@ -1537,17 +1565,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.306672, 0, 8.563938)
 
 [node name="lianas2" parent="." unique_id=2077410139 instance=ExtResource("19_2j7vg")]
 transform = Transform3D(1, 0, 0, 0, 0.98778373, -0.15583108, 0, 0.15583108, 0.98778373, -112.927864, 2.2804685, -10.973755)
-
-[node name="Area3D5" parent="." unique_id=8973205 instance=ExtResource("23_ihkm2")]
-transform = Transform3D(-0.39983806, -0.0074507548, -0.00860294, -0.00941395, 0.046610385, 0.39716345, -0.006395455, 0.39720514, -0.046766866, -112.183205, 1.5604887, -12.725571)
-note_text = "“Estos árboles… parece que me siguen. Pero no hay nadie. O eso creo…”"
-
-[node name="Label3D" type="Label3D" parent="Area3D5" unique_id=1814555332]
-transform = Transform3D(-0.9927597, -0.006782704, 0.11992344, 0.11723663, 0.16255172, 0.9797104, -0.026138928, 0.9866765, -0.16057958, 0.10865307, -0.0005264282, 0.79450417)
-outline_modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
-text = "Presiona I para recoger notas"
-font = SubResource("FontFile_ihkm2")
-font_size = 100
 
 [node name="DirectionalLight3D5" type="DirectionalLight3D" parent="." unique_id=2115061556]
 transform = Transform3D(-0.6093706, 0.68665916, -0.39644268, 3.1694107e-08, 0.49999988, 0.8660255, 0.7928856, 0.52773046, -0.30468524, -73.780045, 28.565708, -110.418594)
@@ -2172,17 +2189,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.306672, 0, 8.563938)
 
 [node name="lianas5" parent="." unique_id=1057406585 instance=ExtResource("19_2j7vg")]
 transform = Transform3D(1, 0, 0, 0, 0.98778373, -0.15583108, 0, 0.15583108, 0.98778373, 115.85663, 2.2804685, -26.118973)
-
-[node name="Area3D8" parent="." unique_id=4450116 instance=ExtResource("23_ihkm2")]
-transform = Transform3D(-0.39983806, -0.0074507548, -0.00860294, -0.00941395, 0.046610385, 0.39716345, -0.006395455, 0.39720514, -0.046766866, 116.60129, 1.5604887, -27.870789)
-note_text = "“Estos árboles… parece que me siguen. Pero no hay nadie. O eso creo…”"
-
-[node name="Label3D" type="Label3D" parent="Area3D8" unique_id=869619277]
-transform = Transform3D(-0.9927597, -0.006782704, 0.11992344, 0.11723663, 0.16255172, 0.9797104, -0.026138928, 0.9866765, -0.16057958, 0.10865307, -0.0005264282, 0.79450417)
-outline_modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
-text = "Presiona I para recoger notas"
-font = SubResource("FontFile_ihkm2")
-font_size = 100
 
 [node name="DirectionalLight3D6" type="DirectionalLight3D" parent="." unique_id=181925893]
 transform = Transform3D(-0.6093706, 0.68665916, -0.39644268, 3.1694107e-08, 0.49999988, 0.8660255, 0.7928856, 0.52773046, -0.30468524, 155.00446, 28.565708, -112.844955)
@@ -3500,20 +3506,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.660046, 0, 0)
 
 [node name="tree07_2" parent="tree28/tree08/tree08/tree10/tree07-11/tree07_1" unique_id=1321158058 instance=ExtResource("7_kq8la")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.306672, 0, 8.563938)
-
-[node name="lianas10" parent="." unique_id=1605221109 instance=ExtResource("19_2j7vg")]
-transform = Transform3D(-0.04400303, 0.15568015, 0.986827, 0, 0.98778373, -0.15583108, -0.9990314, -0.0068570394, -0.043465476, -118.00972, 2.280468, 84.72383)
-
-[node name="Area3D13" parent="." unique_id=112164232 instance=ExtResource("23_ihkm2")]
-transform = Transform3D(0.011204827, 0.3971483, -0.046343017, -0.009413952, 0.046610396, 0.39716354, 0.3997323, -0.010034693, 0.01065249, -119.79259, 1.5604897, 84.05698)
-note_text = "“Estos árboles… parece que me siguen. Pero no hay nadie. O eso creo…”"
-
-[node name="Label3D" type="Label3D" parent="Area3D13" unique_id=985998827]
-transform = Transform3D(-0.9927597, -0.006782704, 0.11992344, 0.11723663, 0.16255172, 0.9797104, -0.026138928, 0.9866765, -0.16057958, 0.10865307, -0.0005264282, 0.79450417)
-outline_modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
-text = "Presiona I para recoger notas"
-font = SubResource("FontFile_ihkm2")
-font_size = 100
 
 [node name="DirectionalLight3D10" type="DirectionalLight3D" parent="." unique_id=1835163404]
 transform = Transform3D(0.8189317, 0.49700424, -0.28694543, 3.1694103e-08, 0.49999985, 0.86602557, 0.573891, -0.7092158, 0.4094657, -139.43933, -60.43388, 113.30286)
