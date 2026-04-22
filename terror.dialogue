@@ -1,53 +1,13 @@
 ~ start
 
-Yo: [speed=0.6]¿Qué…? ¿Dónde estoy?[wait=2]
+~ inicio
 
-Yo: [speed=0.5]El coche… se ha parado…[wait=1.5]
+Jugador: No me lo puedo creer. En serio. De todos los sitios del mundo...
 
-Yo: [speed=0.5]Lo último que recuerdo es la carretera… y luego… nada…[wait=2]
+Jugador: Sin cobertura, de noche, en medio de un bosque. Fantástico.
 
-Yo: [speed=0.5]Todo… oscuro… y frío…[wait=2]
+Jugador: Bueno, a ver qué le pasa a este cacharro.
 
-Yo: [speed=0.8]Vale… respira… uno… dos…[wait=1.5]
-
-Yo: [speed=0.7]Seguro que es… un sueño… ¿verdad?[wait=1]
-
-???: [speed=1.5][glitch]¿Y si no hay salida?[/glitch][wait=1]
-
-???: [speed=1.5][glitch]¿Y si te mereces quedarte aquí… pudriéndote?[/glitch][wait=1]
-
-Yo: [speed=1.8]¡No! ¡Cállate![wait=1.5]
-
-???: [speed=1.0][glitch]Buena suerte…[/glitch][next=4]
-
-Yo: [speed=0.8]¿Hola…?[wait=2]
-
-Yo: [speed=0.8]¿Hay alguien ahí?[next=3]
-
-Yo: [speed=0.5](Silencio)[wait=2]
-
-Yo: [speed=0.5]…[wait=1.5]
-
-Yo: [speed=0.6]Mis manos tiemblan…[wait=1]
-
-Yo: [speed=0.6]Salgo del coche… la puerta cruje…[wait=1]
-
-Yo: [speed=0.6]El motor está muerto…[wait=1]
-
-Yo: [speed=0.7]Veo humo saliendo del capó…[wait=1.5]
-
-Yo: [speed=0.7]Genial…[wait=1]
-
-Yo: [speed=0.6]Busco la linterna…[wait=1]
-
-Yo: [speed=0.8]La luz parpadea… pero alumbra…[wait=2]
-
-Yo: [speed=0.7]Espera…[wait=1]
-
-Yo: [speed=0.6]Mis ojos se acomodan a la oscuridad…[wait=1.5]
-
-Yo: [speed=0.7]Allí… entre las ramas…[wait=2]
-
-Yo: [speed=0.4]Parece haber algo en un árbol… cerca de donde estoy…
+Jugador: Una nota. Alguien ha dejado una nota en mi capó. Qué raro.
 
 ~ end
