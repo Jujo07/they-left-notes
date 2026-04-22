@@ -16,9 +16,8 @@ func _ready():
 		var spawn = get_tree().current_scene.find_child(meta.spawn_point, true, false)
 		if spawn:
 			global_transform.origin = spawn.global_transform.origin
-			
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	await get_tree().create_timer(5.0).timeout
+	var tiempo = randf_range(30.0, 60.0)
+	await get_tree().create_timer(tiempo).timeout
 	var sombra = get_tree().current_scene.find_child("sombra", true, false)
 	if sombra:
 		activar_susto_sombra(sombra)
@@ -88,7 +87,7 @@ func activar_susto_sombra(sombra: Node3D):
 	susto_rot_y_objetivo = atan2(-dir.x, -dir.z)
 	sombra.visible = true
 	# $AudioStreamPlayer.play()  <-- comentado por ahora
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	sombra.visible = false
 	susto_activo = false
 	bloqueado = false

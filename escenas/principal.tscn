@@ -126,7 +126,7 @@ script = ExtResource("1_vg8cm")
 transform = Transform3D(0.99976003, 0.018222557, -0.012153249, -0.021243652, 0.9418557, -0.33534533, 0.0053357594, 0.33552304, 0.94201684, -0.015479147, 0.6593822, -0.35695744)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Jugador/Camera3D" unique_id=1923158699]
-light_energy = 1.7
+light_energy = 2.3
 spot_range = 8.102453
 spot_attenuation = 0.0
 spot_angle = 17.145111
@@ -6894,5 +6894,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.306672, 0, 8.563938)
 transform = Transform3D(0.23315689, 0, 0.9724391, 0, 1, 0, -0.9724391, 0, 0.23315689, 135.18881, 0, 166.35968)
 
 [node name="sombra" parent="." unique_id=1390225148 instance=ExtResource("25_adqgd")]
-transform = Transform3D(-0.58110076, 0, -0.8138316, 0, 1, 0, 0.8138316, 0, -0.58110076, 0, 3.773918, 0)
-visible = false
+transform = Transform3D(-0.8350015, 0, 0.55024767, 0, 1, 0, -0.55024767, 0, -0.8350015, 0, 3.773918, 0)
