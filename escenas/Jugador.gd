@@ -57,8 +57,8 @@ func caminar(delta):
 	velocity.z = direccion.z * velocidad
 	if not is_on_floor():
 		velocity.y -= 9.8 * delta
-	else:
-		velocity.y = 0
+	#else:
+	#	velocity.y = 0
 
 func mover_camara(event: InputEventMouseMotion):
 	if susto_activo:
