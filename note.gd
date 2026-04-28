@@ -16,26 +16,15 @@ func _process(delta):
 		open_note()
 
 func open_note():
-	print("📝 === INICIO open_note() ===")
-	
 	var note_ui = get_node("/root/NoteUI")
-	var hud = get_node("/root/CanvasLayer")
-	
-	print("📦 note_ui encontrado: ", note_ui != null)
-	print("📦 hud encontrado: ", hud != null)
+	var hud = get_node("/root/Hud")
 	
 	if note_ui != null:
 		note_ui.show_note(note_text)
-		print("✅ show_note() llamado")
 	
 	if hud != null:
-		print("🔍 HUD script: ", hud.get_script())
-		print("🔍 HUD tiene nota_recogida: ", hud.has_method("nota_recogida"))
 		hud.nota_recogida()
-		print("✅ nota_recogida() llamado")
 	else:
-		push_error("❌ HUD es NULL")
-	
-	print("📝 === FIN open_note() ===")
+		push_error("HUD es NULL")
 	
 	queue_free()

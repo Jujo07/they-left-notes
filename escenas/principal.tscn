@@ -5142,7 +5142,7 @@ transform = Transform3D(-0.9999807, 0, -0.0062307045, 0.006211964, 0.07750204, -
 [node name="male_casual" parent="." unique_id=1743912161 instance=ExtResource("23_adqgd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8470526, 0, -14.005916)
 
-[node name="CanvasLayer2" parent="." unique_id=1181376919 instance=ExtResource("24_860se")]
+[node name="HUD" parent="." unique_id=1181376919 instance=ExtResource("24_860se")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1627697437]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 187.6716)
