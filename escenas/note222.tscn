@@ -46,7 +46,7 @@ shadow_mesh = SubResource("ArrayMesh_63anb")
 albedo_texture = ExtResource("2_k0eaf")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_lxys7"]
-radius = 0.94496304
+radius = 1.9536121
 
 [node name="Area3D" type="Area3D" unique_id=1279826344]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.034647256, 0)

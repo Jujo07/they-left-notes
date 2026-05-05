@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ctuy5abamikek"]
+
+[ext_resource type="PackedScene" uid="uid://cdcmf24jsr5gb" path="res://assets/gasoline_tank.glb" id="1_1f8ke"]
+[ext_resource type="Script" uid="uid://cy82fa01b8ews" path="res://gasolina.gd" id="2_ynape"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1f8ke"]
+
+[node name="Sketchfab_Scene" unique_id=1288742520 instance=ExtResource("1_1f8ke")]
+
+[node name="Object_4" parent="Sketchfab_model/root/GLTF_SceneRootNode/Cap_0" parent_id_path=PackedInt32Array(1840288391) index="0" unique_id=788793999]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="Object_6" parent="Sketchfab_model/root/GLTF_SceneRootNode/GasolineTank_1" parent_id_path=PackedInt32Array(1958344845) index="0" unique_id=1898441525]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="Sketchfab_model" parent_id_path=PackedInt32Array(320890293) index="1" unique_id=891663805]
+script = ExtResource("2_ynape")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/Area3D" index="0" unique_id=1256131477]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+shape = SubResource("BoxShape3D_1f8ke")

@@ -6,5 +6,7 @@
 script = ExtResource("1_k5de2")
 
 [node name="LabelNotas" type="Label" parent="." unique_id=1088889399]
-offset_right = 629.0
-offset_bottom = 185.0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 653.0
+offset_bottom = 201.0

@@ -15,16 +15,19 @@
 [ext_resource type="PackedScene" uid="uid://c8mi8fnjha3rh" path="res://assets/smoke.glb" id="12_860se"]
 [ext_resource type="PackedScene" uid="uid://ki21aib5ne32" path="res://escenas/cadaver.tscn" id="16_nwl1k"]
 [ext_resource type="PackedScene" uid="uid://b2kgh51lemngv" path="res://escenas/lianas.tscn" id="19_2j7vg"]
-[ext_resource type="PackedScene" uid="uid://b3csamhgqdn1l" path="res://escenas/note.tscn" id="21_lm6yt"]
 [ext_resource type="PackedScene" uid="uid://cwi1c3mt0kxjb" path="res://escenas/eye.tscn" id="22_ihkm2"]
 [ext_resource type="PackedScene" uid="uid://dfbhr6xfsi55t" path="res://escenas/NoteUi.tscn" id="23_860se"]
 [ext_resource type="PackedScene" uid="uid://cystnpoaswm1l" path="res://escenas/shadow.tscn" id="23_adqgd"]
 [ext_resource type="PackedScene" uid="uid://b34xrq76uxe7q" path="res://escenas/note222.tscn" id="23_ihkm2"]
 [ext_resource type="PackedScene" uid="uid://dahc4ctbsg8qt" path="res://HUD.tscn" id="24_860se"]
+[ext_resource type="Script" uid="uid://4gocrynnhs5n" path="res://escenas/tp.gd" id="25_1rcyp"]
 [ext_resource type="PackedScene" uid="uid://b5b1qdt2up50m" path="res://sombra.tscn" id="25_adqgd"]
 [ext_resource type="PackedScene" uid="uid://xfv3306pjtrw" path="res://escenas/cabin2.tscn" id="25_eefbl"]
 [ext_resource type="PackedScene" uid="uid://cgt03muskkb7t" path="res://cabin33.tscn" id="25_ewcac"]
+[ext_resource type="PackedScene" uid="uid://dooghhthk6aoi" path="res://habitación.tscn" id="25_y7lhk"]
 [ext_resource type="PackedScene" uid="uid://hxf4i3wef6as" path="res://escenas/cabin1.tscn" id="26_eefbl"]
+[ext_resource type="Script" uid="uid://d4av63n2d4mix" path="res://escenas/tp2.gd" id="27_ewcac"]
+[ext_resource type="PackedScene" uid="uid://ctuy5abamikek" path="res://gasolina.tscn" id="28_y7lhk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vq262"]
 sky_top_color = Color(0.050760232, 0.07049177, 0.096773066, 1)
@@ -85,6 +88,10 @@ cache/0/100/0/scale = 1.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_860se"]
 size = Vector3(403.40244, 51.319336, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_adqgd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eefbl"]
+
 [node name="Principal" type="Node3D" unique_id=1753112329]
 script = ExtResource("1_l4vcb")
 
@@ -119,7 +126,7 @@ light_specular = 2.32
 shadow_enabled = true
 
 [node name="Jugador" type="CharacterBody3D" parent="." unique_id=453532006]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61719036, 0.78952897, 158.54031)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9997425, 0.78952897, 152.98973)
 floor_max_angle = 1.3089969
 floor_snap_length = 0.3
 script = ExtResource("1_vg8cm")
@@ -2716,36 +2723,40 @@ transform = Transform3D(0.98701555, -0.11270848, 0.11444205, 0.11270826, -0.0216
 light_color = Color(0.7299978, 0.55758834, 0.20719174, 1)
 light_energy = 5.063
 
+[node name="Label3D" type="Label3D" parent="Node3D5" unique_id=1192958947]
+transform = Transform3D(0.39941156, 0.021687414, -3.156066e-05, -0.0028486592, 0.053038597, 0.39645767, 0.021499507, -0.3958744, 0.053115085, 0.047790527, 1.3630589, 2.3235493)
+outline_modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+text = "Presiona I para recoger notas"
+font = SubResource("FontFile_ihkm2")
+font_size = 100
+
 [node name="cadaver" parent="." unique_id=435655486 instance=ExtResource("16_nwl1k")]
 transform = Transform3D(0.97620517, 0, -0.21684851, 0, 1, 0, 0.21684851, 0, 0.97620517, -1.1050503, 0, -92.900925)
 
 [node name="lianas" parent="." unique_id=1623890258 instance=ExtResource("19_2j7vg")]
 transform = Transform3D(-0.10404242, -0.15498537, -0.9824229, 0, 0.98778373, -0.15583108, 0.9945729, -0.016213043, -0.10277141, 16.620932, 2.347739, 12.753343)
 
-[node name="Silent Hill 1 Meshes - A Note Doghouse" parent="." unique_id=1012467095 instance=ExtResource("21_lm6yt")]
-transform = Transform3D(0.99939567, -0.03264489, 0.011935871, -0.010517306, 0.04328634, 0.99900746, -0.033129152, -0.99852943, 0.04291688, 4.9488935, 2.4727144, -96.55379)
-
 [node name="Area3D" parent="." unique_id=1279826344 instance=ExtResource("23_ihkm2")]
-transform = Transform3D(0.39769045, 0, 0.04292212, 0, 0.39999998, 0, -0.04292212, 0, 0.39769045, 8.182592, 1.0512307, -97.39965)
-note_text = "\"La cabaña estaba vacía. Encontré más notas dentro, de alguien que estuvo aquí antes que yo. Llevaba semanas atrapado. Decía que la salida está al este, pasando el río seco. Esta noche he escuchado algo fuera. No me he asomado.\""
+transform = Transform3D(0.39769047, 9.428293e-10, 0.042922124, -0.042718, 0.038963675, 0.39579922, -0.004181009, -0.39809772, 0.038738698, 4.0308337, 1.4771835, -95.09195)
+note_text = "\"He rodeado la cabaña dos veces. No me atrevo a entrar. Hay algo dentro, lo escucho moverse. Pero hace frío y llevo dos noches sin dormir. No sé cuánto más puedo aguantar fuera.\""
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Area3D" unique_id=233635715]
+transform = Transform3D(2.5, -7.450581e-09, -3.8417056e-08, 7.450581e-09, 2.5000007, -7.4505806e-08, -3.934838e-08, -4.4703484e-08, 2.5, 0.19661045, 0.19140625, 0.56067276)
+light_color = Color(0.9980759, 0.97017807, 0.9277816, 1)
+light_energy = 0.395
 
 [node name="Area3D4" parent="." unique_id=921803863 instance=ExtResource("23_ihkm2")]
 transform = Transform3D(0.39769045, 0, 0.04292212, 0, 0.39999998, 0, -0.04292212, 0, 0.39769045, 27.151733, 1.0512307, -3.716629)
 note_text = "Este intentó correr. Le dije 'shhh, él no quiere verte así'. Lo arreglé para que tú no sufras al verlo."
 
 [node name="Area3D3" parent="." unique_id=1491836309 instance=ExtResource("23_ihkm2")]
-transform = Transform3D(0.29641226, 0.008948393, -0.045383774, -0.008894384, 0.29986635, 0.0010337328, 0.04539438, 0.00032416658, 0.2965455, 7.397878, 0.1763517, -73.69623)
-note_text = "\"He encontrado una cabaña abandonada al norte. Voy a intentar llegar. Si encuentras esto, sigue las marcas que he hecho en los árboles. No uses la linterna más de lo necesario. Parece que la luz lo atrae.\""
+transform = Transform3D(0.49910983, 0.014714752, 0.02594021, -0.014823973, 0.4997772, 0.0017228877, -0.025877953, -0.0024888946, 0.4993237, 7.417543, 0.1803639, -73.74141)
+note_text = "\"Llevo horas dando vueltas. Siempre acabo aquí, en esta fogata. He intentado ir al norte, al sur, al este. El bosque me devuelve al mismo sitio. Ya no sé si es el bosque o yo.\""
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Area3D3" unique_id=1376244543]
-transform = Transform3D(3.3333335, -8.137431e-08, 1.1920929e-07, 7.566996e-10, 3.3333328, 2.0954758e-09, -8.940697e-08, -1.8626451e-09, 3.3333333, -0.33927727, -0.004844904, -1.5137177)
+transform = Transform3D(1.9999998, -1.1117663e-08, 7.4505806e-08, 3.4924597e-10, 2, 2.7939677e-09, -5.9604645e-08, -9.313226e-10, 1.9999999, -0.25863647, -0.0051909685, -0.7194977)
 light_color = Color(0.91764706, 0.68235296, 0.25882354, 1)
 light_energy = 0.912
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="Area3D3" unique_id=330230978]
-transform = Transform3D(3.3333335, -8.137431e-08, 1.1920929e-07, 7.566996e-10, 3.3333328, 2.0954758e-09, -8.940697e-08, -1.8626451e-09, 3.3333333, -0.00406456, 0.19862103, 0.012664795)
-light_color = Color(0.5764706, 1, 1, 1)
-light_energy = 2.0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Area3D3" unique_id=779468851]
 transform = Transform3D(-0.1033825, -3.319297, 0.28756383, -0.07006803, 0.28980476, 3.3199718, -3.3309927, 0.09692344, -0.0787612, 66.95648, 17.877054, 283.2553)
@@ -2754,14 +2765,7 @@ light_energy = 1.537
 
 [node name="Area3D2" parent="." unique_id=125540717 instance=ExtResource("23_ihkm2")]
 transform = Transform3D(0.04796087, -0.39427432, 0.047408134, -0.009413952, 0.046610396, 0.39716354, -0.3970028, -0.048736513, -0.003690516, 20.291574, 1.5003188, 111.23903)
-note_text = "\"Si estás leyendo esto, tu coche también se averió aquí. No entres al bosque. Espera en el coche. Yo cometí el error de adentrarme y llevo dos días sin encontrar la salida. Hay algo aquí.\""
-
-[node name="Label3D" type="Label3D" parent="Area3D2" unique_id=1942258716]
-transform = Transform3D(-0.9927597, -0.006782704, 0.11992344, 0.11723663, 0.16255172, 0.9797104, -0.026138928, 0.9866765, -0.16057958, 0.10865307, -0.0005264282, 0.79450417)
-outline_modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
-text = "Presiona I para recoger notas"
-font = SubResource("FontFile_ihkm2")
-font_size = 100
+note_text = "\"He dejado de intentar entender qué es. Solo sé que si te quedas quieto, a veces pasa de largo.\""
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Area3D2" unique_id=2021779960]
 transform = Transform3D(2.4999993, -2.9802322e-08, -2.2351742e-08, -5.9604645e-08, 2.5, -3.655441e-08, -1.8626451e-09, -6.9849193e-09, 2.4999998, 0.00812912, 0.574852, -0.06727028)
@@ -2771,8 +2775,8 @@ light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 
 [node name="Area3D2" parent="Area3D2" unique_id=1091416136 instance=ExtResource("23_ihkm2")]
-transform = Transform3D(-0.39324814, -0.072885156, 0.006546594, -0.03877172, 0.23786618, 0.31924367, -0.062063288, 0.3132204, -0.24091679, -102.456116, 45.124496, -8.379289)
-note_text = "\"Si encuentras esto, no sigas el camino del bosque. Yo cometí ese error. Da igual lo que escuches, da igual lo que veas. Vuelve a tu coche y espera. Por favor.\""
+transform = Transform3D(-0.688186, -0.1275493, 0.011456739, -0.06785068, 0.41626632, 0.55867577, -0.10861111, 0.5481364, -0.42160422, -102.411285, 45.120346, -8.390192)
+note_text = "\"Si estás leyendo esto, tu coche también se averió aquí. No entres al bosque. Espera en el coche. Yo cometí el error de adentrarme y llevo dos días sin encontrar la salida. Hay algo aquí.\""
 
 [node name="tree14" parent="." unique_id=1239286038 instance=ExtResource("7_kq8la")]
 transform = Transform3D(0.9989595, 0, -0.045607, 0, 1, 0, 0.045607, 0, 0.9989595, -80.12411, 0, -38.14274)
@@ -6864,6 +6868,7 @@ transform = Transform3D(0.23315689, 0, 0.9724391, 0, 1, 0, -0.9724391, 0, 0.2331
 
 [node name="sombra" parent="." unique_id=1390225148 instance=ExtResource("25_adqgd")]
 transform = Transform3D(-0.8350015, 0, 0.55024767, 0, 1, 0, -0.55024767, 0, -0.8350015, 0, 3.773918, 0)
+visible = false
 
 [node name="Area3D5" parent="." unique_id=1621234016 instance=ExtResource("25_eefbl")]
 transform = Transform3D(0.7728332, 0, -0.6346091, 0, 1, 0, 0.6346091, 0, 0.7728332, 20.428205, 0, -84.38031)
@@ -6888,3 +6893,39 @@ transform = Transform3D(0.70473343, 0, 0.70947236, 0, 1, 0, -0.70947236, 0, 0.70
 transform = Transform3D(0.8162283, 0, 0.57772946, 0, 1, 0, -0.57772946, 0, 0.8162283, 0.26146698, 2.8470345, 3.7825546)
 light_color = Color(1, 0.73333335, 0.32941177, 1)
 light_energy = 3.0
+
+[node name="spawn_exterior" type="Node3D" parent="Area3D5/Node3D" unique_id=1441073991]
+transform = Transform3D(100, 0, -4.7683716e-06, 0, 100, 0, 4.7683716e-06, 0, 100, 0.11847782, 1.6279805, 5.7162094)
+
+[node name="Area3D" type="Area3D" parent="Area3D5/Node3D/spawn_exterior" unique_id=1553360047 node_paths=PackedStringArray("destino")]
+script = ExtResource("25_1rcyp")
+destino = NodePath("../../../../habitacion/spawn_interior")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D5/Node3D/spawn_exterior/Area3D" unique_id=1278143845]
+transform = Transform3D(0.02, 0, -7.450584e-11, 0, 0.02, 0, 7.450584e-11, 0, 0.02, 0, 0, 0)
+shape = SubResource("BoxShape3D_adqgd")
+
+[node name="habitacion" parent="." unique_id=341482380 instance=ExtResource("25_y7lhk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 342.1067)
+
+[node name="spawn_interior" type="Node3D" parent="habitacion" unique_id=948810889]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -0.1296714, 0.56409216, -2.631073)
+
+[node name="Area3D" type="Area3D" parent="habitacion/spawn_interior" unique_id=520895891 node_paths=PackedStringArray("destino")]
+script = ExtResource("27_ewcac")
+destino = NodePath("../../../Area3D5/Node3D/spawn_exterior")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="habitacion/spawn_interior/Area3D" unique_id=1249688071]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
+shape = SubResource("BoxShape3D_eefbl")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="habitacion" unique_id=888253279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36384025, 2.0555472, 0.04537964)
+light_color = Color(0.52906674, 0.5290667, 0.5290667, 1)
+
+[node name="Area3D2" parent="habitacion" unique_id=1299750010 instance=ExtResource("23_ihkm2")]
+transform = Transform3D(0.70000005, 0, 0, 0, -0.7, 6.119594e-08, 0, -6.119594e-08, -0.7, -0.45053202, 0.8841219, 2.6989746)
+note_text = "\"La gasolina está aquí. La encontré el primer día. Llevo semanas sin poder salir. Cada vez que llego al coche, el motor no arranca. La gasolina no es el problema. Nunca lo fue. Lo siento..\""
+
+[node name="Sketchfab_Scene" parent="habitacion" unique_id=1288742520 instance=ExtResource("28_y7lhk")]
+transform = Transform3D(7.071068, 0, 7.071068, 0, 10, 0, -7.071068, 0, 7.071068, 1.5101452, 0.32878095, 1.5551147)
