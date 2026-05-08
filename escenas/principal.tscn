@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://hxf4i3wef6as" path="res://escenas/cabin1.tscn" id="26_eefbl"]
 [ext_resource type="Script" uid="uid://d4av63n2d4mix" path="res://escenas/tp2.gd" id="27_ewcac"]
 [ext_resource type="PackedScene" uid="uid://ctuy5abamikek" path="res://gasolina.tscn" id="28_y7lhk"]
+[ext_resource type="PackedScene" uid="uid://dvokjfwvu2yxq" path="res://final.tscn" id="29_1rcyp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vq262"]
 sky_top_color = Color(0.050760232, 0.07049177, 0.096773066, 1)
@@ -126,7 +127,7 @@ light_specular = 2.32
 shadow_enabled = true
 
 [node name="Jugador" type="CharacterBody3D" parent="." unique_id=453532006]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9997425, 0.78952897, 152.98973)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9997425, 0.78952897, -60.05049)
 floor_max_angle = 1.3089969
 floor_snap_length = 0.3
 script = ExtResource("1_vg8cm")
@@ -6929,3 +6930,5 @@ note_text = "\"La gasolina está aquí. La encontré el primer día. Llevo seman
 
 [node name="Sketchfab_Scene" parent="habitacion" unique_id=1288742520 instance=ExtResource("28_y7lhk")]
 transform = Transform3D(7.071068, 0, 7.071068, 0, 10, 0, -7.071068, 0, 7.071068, 1.5101452, 0.32878095, 1.5551147)
+
+[node name="PantallaFinal" parent="." unique_id=2133354044 instance=ExtResource("29_1rcyp")]

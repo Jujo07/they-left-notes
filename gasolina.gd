@@ -11,6 +11,7 @@ var tiempo_inspeccion := 0.0
 @onready var mesh = $"../root/GLTF_SceneRootNode"
 
 func _ready():
+	add_to_group("gasolina")
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 
@@ -48,7 +49,7 @@ func iniciar_inspeccion():
 	inspeccionando = true
 	jugador.bloqueado = true
 	pos_original = mesh.global_position
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func guardar():
 	inspeccionando = false

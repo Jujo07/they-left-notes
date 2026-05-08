@@ -1,17 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://btun8mao6ip3f"]
+[gd_scene format=3 uid="uid://btun8mao6ip3f"]
 
 [ext_resource type="ArrayMesh" uid="uid://cufynbpeaqls5" path="res://demo/assets/cars/Car 01/Car.obj" id="1_ko5e3"]
+[ext_resource type="Script" uid="uid://erymivmpqt0p" path="res://escenas/final.gd" id="2_w7vlm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rql76"]
 size = Vector3(2.173462, 2.5083008, 5.3779297)
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_1xf01"]
+size = Vector3(0.8765869, 0.50268555, 1.6810303)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Node3D" type="Node3D" unique_id=1236533221]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1652055401]
 mesh = ExtResource("1_ko5e3")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=749255925]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=994039078]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020446777, 1.3069375, -0.0746212)
 shape = SubResource("BoxShape3D_rql76")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1484184465]
+script = ExtResource("2_w7vlm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1533238786]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.3894043, 0.9946289, -0.17700195)
+shape = SubResource("BoxShape3D_1xf01")

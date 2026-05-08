@@ -40,12 +40,6 @@ func _input(event):
 		mover_camara(event)
 	if bloqueado:
 		return
-	if Input.is_action_just_pressed("ocultar_raton"):
-		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		else:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
 func caminar(delta):
 	direccion = transform.basis * Vector3(
 		Input.get_axis("izquierda", "derecha"),
